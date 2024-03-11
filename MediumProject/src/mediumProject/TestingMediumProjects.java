@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/mediumProject/TestingMediumProjects.java
 package mediumProject;
 
 public class TestingMediumProjects {
@@ -39,7 +38,7 @@ public class TestingMediumProjects {
 	public static void topSecretTests() {
 		TopSecret n = new TopSecret("The secret tomato sauce ingredients are: onions, carrots,\r\n"
 				+ "garlic, whole tomatoes, salt, tomato paste and olive oil.");
-		TopSecret s = n.redact(new String[]{"tomato","secret","ol","a"});
+		TopSecret s = n.redact(new String[]{"tomato", "secret", "ol", "a"});
 		System.out.println(s);
 	}
 	
@@ -49,4 +48,3 @@ public class TestingMediumProjects {
 		System.out.println(wordCounter);
 	}
 }
->>>>>>> ee3964c9f9a1026fbc0b8692ba526813bf664a9d:MediumProject/src/mediumProject/TestingMediumProjects.java
