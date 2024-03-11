@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/mediumProject/WordCounter.java
 package mediumProject;
 
 public class WordCounter {
@@ -52,4 +51,3 @@ public class WordCounter {
 		return data + "\n";
 	}
 }
->>>>>>> ee3964c9f9a1026fbc0b8692ba526813bf664a9d:MediumProject/src/mediumProject/WordCounter.java
