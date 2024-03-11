@@ -3,7 +3,6 @@ package mediumProject;
 public class TopSecret {
 	private String text;
 	
-	
 	public TopSecret(String text) {
 		this.setTopSecret(text);
 	}
