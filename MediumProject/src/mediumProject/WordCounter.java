@@ -2,8 +2,8 @@
 package mediumProject;
 
 public class WordCounter {
-	String text;
-	int[] frequencies;
+	private String text;
+	private int[] frequencies;
 	
 	public enum Keyword {
 		FOX, QUICK, LAZY, BROWN, CAT;
@@ -51,12 +51,5 @@ public class WordCounter {
 		}
 		return data + "\n";
 	}
-}
-=======
-package mediumProject;
-
-public class WordCounter {
-	String text;
-	
 }
 >>>>>>> ee3964c9f9a1026fbc0b8692ba526813bf664a9d:MediumProject/src/mediumProject/WordCounter.java
