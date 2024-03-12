@@ -9,8 +9,7 @@ public class SmallProjectTesting {
 	}
 	
 	public static void ProjectOneTests() {
-		Scanner keyboard = new Scanner(System.in);
-		ProjectOne projectOne = new ProjectOne(keyboard);
+		ProjectOne projectOne = new ProjectOne();
 		
 		//ProjectOne.systemMsgs();
 		
