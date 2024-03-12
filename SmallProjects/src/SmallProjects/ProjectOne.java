@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class ProjectOne {
 	Scanner keyboard;
-	public ProjectOne(Scanner keyboard) {
-		this.keyboard = keyboard;
+	public ProjectOne() {
 	}
 	
 	public void closeKeyboard() {
