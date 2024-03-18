@@ -1,13 +1,25 @@
 package SmallProjects;
 
+import java.util.Scanner;
+
 public class ProjectThree {
 	static ProjectThree projectThree = new ProjectThree();
+	static Scanner keyboard = new Scanner(System.in);
+	
+	public static void closeKeyboard() {
+		keyboard.close();
+	}
+	
+	public static String keyBoardInputs(String text) {
+		System.out.println(text);
+		String answer = keyboard.nextLine();
+		return answer;
+	}
 	
 	
 /*------------------------------------------------------------------------------------------------------------*/
 /*                                          Grade class                                                       */
 /*------------------------------------------------------------------------------------------------------------*/
-	
 	
 	public class Grade {
 		private int percentage;//a value in the range 0..100.
@@ -24,11 +36,13 @@ public class ProjectThree {
 			return this.percentage;
 		}
 		
-		public static void main(String[] args) {
-			ProjectThree.Grade p2 = projectThree.new Grade(75);//create a grade object
-			p2.setPercentage(95);;
-			
-			System.out.println(p2.getPercentage() +"%\n");
+		public class UniversityGradeApplication{
+			public static void main(String[] args) {
+				ProjectThree.Grade p2 = projectThree.new Grade(75);//create a grade object
+				p2.setPercentage(95);;
+				
+				System.out.println(p2.getPercentage() +"%\n");
+			}
 		}
 	}
 	
@@ -76,9 +90,11 @@ public class ProjectThree {
 			return  "\nFirst Name: " + this.firstName + "\nLast Name:" + this.lastName + "\nId:" + this.Id;
 		}
 		
-		public static void main(String[] args) {
-			ProjectThree.Student aStudent = projectThree.new Student("Justin","Case",21234);
-			System.out.println(aStudent);
+		public class StudentApplication{
+			public static void main(String[] args) {
+				ProjectThree.Student aStudent = projectThree.new Student("Justin","Case",21234);
+				System.out.println(aStudent);
+			}
 		}
 	}
 	
@@ -120,9 +136,12 @@ public class ProjectThree {
 			return "\nDog's Name:" + this.name + "\nDog's Age:" + this.age + "\n";
 		}
 		
-		public static void main(String[] args) {
-			ProjectThree.Dog dog = projectThree.new Dog("kage", 1);
-			System.out.println(dog);
+		
+		public class Kennel{
+			public static void main(String[] args) {
+				ProjectThree.Dog dog = projectThree.new Dog("kage", 1);
+				System.out.println(dog);
+			}
 		}
 	}
 	
@@ -200,17 +219,19 @@ public class ProjectThree {
 			return "\nBox Height:" + this.width + "\nBox Width:" + this.height + "\nBox Depth" + this.depth + "\n";
 		}
 		
-		public static void main(String[] args) {
-			ProjectThree.Box box1 = projectThree.new Box(123,23,54);
-			ProjectThree.Box box2 = projectThree.new Box(3,23,5);
-			ProjectThree.Box box3 = projectThree.new Box(123,3,9);
-			
-			System.out.println(Box.fits(box1, box2));
-			System.out.println(Box.fits(box3, box2));
-			
-			System.out.println(box1);
-			System.out.println(box2);
-			System.out.println(box3);
+		public class BoxTest{
+			public static void main(String[] args) {
+				ProjectThree.Box box1 = projectThree.new Box(123,23,54);
+				ProjectThree.Box box2 = projectThree.new Box(3,23,5);
+				ProjectThree.Box box3 = projectThree.new Box(123,3,9);
+				
+				System.out.println(Box.fits(box1, box2));
+				System.out.println(Box.fits(box3, box2));
+				
+				System.out.println(box1);
+				System.out.println(box2);
+				System.out.println(box3);
+			}
 		}
 	}
 	
@@ -250,15 +271,107 @@ public class ProjectThree {
 			return "Diameter of Circle: "+ this.diameter + "\nRadius of Circle: " + radius() + "\nVolume of Circle: "+ volume() + "\nSurface Area of Circle: "+ surfaceArea();
 		}
 		
-		public static void main(String[] args) {
-			ProjectThree.Sphere sphere = projectThree.new Sphere(2);
-			System.out.println(sphere);
+		public class MultiSphere{
+			public static void main(String[] args) {
+				ProjectThree.Sphere sphere = projectThree.new Sphere(2);
+				System.out.println(sphere);
+			}
 		}
 	}
 	
-	
-	
-	
-	
-	
+/*------------------------------------------------------------------------------------------------------------*/
+/*                                           Sphere class                                                     */
+/*------------------------------------------------------------------------------------------------------------*/
+
+	public class CoinChanger{
+		private int ten;
+		private int twenty;
+		private int fifty;
+		private int oneDollar;
+		private int twoDollar;
+		
+		public CoinChanger(int ten, int twenty, int fifty, int oneDollar, int twoDollar) {
+			this.setTen(ten);
+			this.setTwenty(twenty);
+			this.setFifty(fifty);
+			this.setOneDollar(oneDollar);
+			this.setTwoDollar(twoDollar);
+		}
+
+		public int getTen() {
+			return ten;
+		}
+
+		public void setTen(int ten) {
+			this.ten = ten;
+		}
+
+		public int getTwenty() {
+			return twenty;
+		}
+
+		public void setTwenty(int twenty) {
+			this.twenty = twenty;
+		}
+
+		public int getFifty() {
+			return fifty;
+		}
+
+		public void setFifty(int fifty) {
+			this.fifty = fifty;
+		}
+
+		public int getOneDollar() {
+			return oneDollar;
+		}
+
+		public void setOneDollar(int oneDollar) {
+			this.oneDollar = oneDollar;
+		}
+
+		public int getTwoDollar() {
+			return twoDollar;
+		}
+
+		public void setTwoDollar(int twoDollar) {
+			this.twoDollar = twoDollar;
+		}
+		
+		public int coinsAsCents() {
+			return this.ten * 10 + this.twenty * 20 + this.fifty * 50 + this.oneDollar * 100 + this.twoDollar * 200;
+		}
+		
+		public int dollars() {
+			return coinsAsCents()/100;
+		}
+		
+		public int cents() {
+			return coinsAsCents() % 100;
+		}
+		
+		public class CoinChangerApplication {
+			public static void main(String[] args) {
+				boolean toExit = false;
+				
+				do {
+					System.out.println("Welcome to the Coin Changer Machine. Please input your coins:");
+					
+					int tens = Integer.parseInt(keyBoardInputs("Number of 10c coins:"));
+					int twenty = Integer.parseInt(keyBoardInputs("Number of 20c coins:"));
+					int fifty = Integer.parseInt(keyBoardInputs("Number of 50c coins:"));
+					int oneDollar = Integer.parseInt(keyBoardInputs("Number of dollar coins:"));
+					int twoDollar = Integer.parseInt(keyBoardInputs("Number of two dollar coins:"));
+					
+					ProjectThree.CoinChanger coins = projectThree.new CoinChanger(tens, twenty, fifty, oneDollar, twoDollar);
+					
+					System.out.println("The total value of the coin collection is: $" + coins.dollars() + "." + coins.cents());
+					String userInput = keyBoardInputs("Would you like to continue? (Y?)");
+					if ("y".equalsIgnoreCase(userInput) == false) {
+						toExit = true;
+					}
+				} while (toExit == false);
+			}
+		}
+	}
 }
