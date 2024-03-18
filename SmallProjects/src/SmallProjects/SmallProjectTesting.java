@@ -35,9 +35,13 @@ public class SmallProjectTesting {
 	}
 	
 	public static void ProjectThreeTests() {
-		//ProjectThree.Grade.main(null);
-		//ProjectThree.Student.main(null);
-		//ProjectThree.Dog.main(null);
-		//ProjectThree.Box.main(null);
+		//ProjectThree.Grade.UniversityGradeApplication.main(null);;
+		//ProjectThree.Student.StudentApplication.main(null);;
+		//ProjectThree.Dog.Kennel.main(null);
+		//ProjectThree.Box.BoxTest.main(null);
+		//ProjectThree.Sphere.MultiSphere.main(null);
+		//ProjectThree.CoinChanger.CoinChangerApplication.main(null);
+		
+		//ProjectThree.closeKeyboard();
 	}
 }
